@@ -1,0 +1,12 @@
+dist/
+packages/
+builtin/art/
+tools/shots/
+tools/uishots/
+tools/sheet*.jpg
+tools/sheet2.html
+tools/bench.csv
+tools/scores.json
+tools/mock-data.js
+LiveWall.ico
+*.bak

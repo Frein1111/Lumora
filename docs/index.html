@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumora — живые обои для Windows</title>
+<meta name="description" content="Lumora: живые обои для Windows с видео, аниме-артами, виджетами, музыкой и Discord. Бесплатно, с открытым кодом.">
+<link rel="stylesheet" href="promo.css">
+<style>
+  html { scroll-behavior: smooth; }
+  body { overflow-x: hidden; }
+  section { max-width: 1180px; margin: 0 auto; padding: 96px 28px; position: relative; }
+  nav { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(16px); background: rgba(11,11,15,.7); border-bottom: 1px solid rgba(255,255,255,.07); }
+  nav div { max-width: 1180px; margin: 0 auto; padding: 14px 28px; display: flex; align-items: center; gap: 28px; }
+  nav .logo { font-size: 26px; } nav a.l { color: var(--mute); text-decoration: none; font-size: 15px; } nav a.l:hover { color: #fff; } nav .btn { margin-left: auto; height: 42px; font-size: 15px; padding: 0 20px; border-radius: 12px; }
+  .hero { padding-top: 90px; text-align: center; }
+  .hero h1 { font-size: clamp(40px, 7vw, 82px); line-height: 1.03; letter-spacing: -.04em; font-weight: 750; margin: 26px 0 22px; }
+  .hero p.lead { font-size: 22px; color: var(--mute); max-width: 720px; margin: 0 auto 34px; line-height: 1.5; }
+  .hero .row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .hero .win { margin-top: 64px; position: relative; transform: perspective(1600px) rotateX(6deg); transform-origin: top; }
+  h2 { font-size: clamp(30px, 4vw, 46px); letter-spacing: -.03em; font-weight: 740; margin-bottom: 14px; text-align: center; }
+  .sub { text-align: center; color: var(--mute); font-size: 19px; max-width: 700px; margin: 0 auto 52px; line-height: 1.5; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .f { padding: 28px; border-radius: 22px; background: linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.09); transition: transform .3s, border-color .3s; }
+  .f:hover { transform: translateY(-4px); border-color: rgba(129,54,242,.6); }
+  .f .ic { width: 50px; height: 50px; border-radius: 15px; display: grid; place-items: center; font-size: 25px; background: linear-gradient(140deg, #8136f2, #c85af0); margin-bottom: 18px; }
+  .f h3 { font-size: 21px; margin-bottom: 8px; } .f p { color: var(--mute); line-height: 1.55; font-size: 16px; }
+  .shots { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); }
+  .shots figure { margin: 0; } .shots figcaption { color: var(--mute); text-align: center; margin-top: 12px; font-size: 15px; }
+  .wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+  .wall div { aspect-ratio: 16/9; border-radius: 14px; background-size: cover; background-position: center; border: 1px solid rgba(255,255,255,.1); transition: transform .3s; } .wall div:hover { transform: scale(1.04); }
+  .steps { counter-reset: s; display: grid; gap: 14px; max-width: 760px; margin: 0 auto; }
+  .steps div { counter-increment: s; padding: 20px 24px 20px 76px; border-radius: 18px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); position: relative; font-size: 18px; line-height: 1.5; }
+  .steps div::before { content: counter(s); position: absolute; left: 22px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--acc); font-weight: 700; }
+  .note { max-width: 760px; margin: 40px auto 0; padding: 20px 24px; border-radius: 16px; background: rgba(255,200,80,.08); border: 1px solid rgba(255,200,80,.25); color: #e8d8b0; line-height: 1.6; font-size: 16px; }
+  footer { text-align: center; padding: 50px 28px 70px; color: var(--mute); border-top: 1px solid rgba(255,255,255,.07); line-height: 1.8; }
+  .cta { text-align: center; } .cta .row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 26px; }
+  @media (max-width: 700px) { .shots { grid-template-columns: 1fr; } nav a.l { display: none; } }
+</style>
+</head>
+<body>
+<nav><div><div class="logo" style="font-size:26px"><i><svg viewBox="0 0 24 24"><path d="M11 2.6l2.3 6.4 6.4 2.3-6.4 2.3L11 20l-2.3-6.4L2.3 11.3 8.7 9z"/><path opacity=".75" d="M19 2.6l.9 2.4 2.4.9-2.4.9-.9 2.4-.9-2.4-2.4-.9 2.4-.9z"/></svg></i>Lumora</div>
+<a class="l" href="#features">Возможности</a><a class="l" href="#screens">Скриншоты</a><a class="l" href="#packs">Коллекции</a><a class="l" href="#install">Установка</a><a class="btn" href="#install">Скачать</a></div></nav>
+
+<div class="glow" style="width:800px;height:800px;background:#8136f2;left:-300px;top:-200px;position:absolute"></div>
+<section class="hero">
+  <span class="tag">Бесплатно · открытый код · Windows 10 / 11</span>
+  <h1>Живые обои,<br><span class="grad">которые не грузят ПК</span></h1>
+  <p class="lead">Видео 1080p, оживающие аниме-арты и красивые анимации прямо под значками рабочего стола. Музыка, часы, погода и Discord — в одном лёгком приложении.</p>
+  <div class="row"><a class="btn" href="#install">Скачать Lumora</a><a class="btn ghost" href="#screens">Смотреть скриншоты</a></div>
+  <div class="win"><img src="screens/p1-home.png" alt="Главное окно Lumora"></div>
+</section>
+
+<section id="features">
+  <h2>Всё, что нужно <span class="grad">для красивого стола</span></h2>
+  <p class="sub">Простой интерфейс и много настроек для тех, кто любит подкрутить.</p>
+  <div class="grid">
+    <div class="f"><div class="ic">🎞</div><h3>Видео, арты, анимации</h3><p>Встроенные анимации, видео-обои 1080p и аниме-арты, которые двигаются за курсором, с частицами и бликами. Свои картинки, GIF, видео и HTML — тоже.</p></div>
+    <div class="f"><div class="ic">🍃</div><h3>Почти не грузит</h3><p>Когда рабочий стол закрыт окнами, обои засыпают. Низкий приоритет, лимит кадров, чёткость, экономия на батарее.</p></div>
+    <div class="f"><div class="ic">🎵</div><h3>Музыка</h3><p>Музыкальные обои с эквалайзером и обложкой. Виджет «Сейчас играет» с кнопками и перемоткой, мини-плеер прямо в приложении.</p></div>
+    <div class="f"><div class="ic">🕒</div><h3>Часы, дата, погода</h3><p>Четыре стиля, шесть шрифтов, любой цвет и фон. Расположение в девяти точках экрана или перетащите мышью.</p></div>
+    <div class="f"><div class="ic">💬</div><h3>Discord</h3><p>В профиле — «Слушает …» с названием, исполнителем, обложкой и временем трека.</p></div>
+    <div class="f"><div class="ic">🎨</div><h3>Ваш стиль</h3><p>Четыре темы, любой акцентный цвет, скругление, масштаб. Яркость, контраст, размытие и затемнение для каждых обоев.</p></div>
+    <div class="f"><div class="ic">🪟</div><h3>Прозрачная панель задач</h3><p>Одним переключателем. Когда вы в окне на весь экран — панель снова обычная.</p></div>
+    <div class="f"><div class="ic">🔄</div><h3>Автосмена и клавиши</h3><p>Слайд-шоу из избранного или всей коллекции. Горячие клавиши работают из любой программы.</p></div>
+    <div class="f"><div class="ic">🚀</div><h3>Живёт в трее</h3><p>Запуск с Windows, мгновенный старт, окно открывается за пару секунд.</p></div>
+  </div>
+</section>
+
+<section id="screens">
+  <h2>Как это <span class="grad">выглядит</span></h2>
+  <p class="sub">Тёмные и светлые темы, любой акцент. Скриншоты настоящего приложения.</p>
+  <div class="shots">
+    <figure><div class="win"><img src="screens/p2-anime.png"></div><figcaption>Коллекция «Аниме» с тегами</figcaption></figure>
+    <figure><div class="win"><img src="screens/p8-blue.png"></div><figcaption>Чёрная тема и бирюзовый акцент</figcaption></figure>
+    <figure><div class="win"><img src="screens/p3-details.png"></div><figcaption>Карточка обоев</figcaption></figure>
+    <figure><div class="win"><img src="screens/p4-settings.png"></div><figcaption>Настройки с предпросмотром</figcaption></figure>
+    <figure><div class="win"><img src="screens/p5-widgets.png"></div><figcaption>Виджеты музыки и времени</figcaption></figure>
+    <figure><div class="win"><img src="screens/p6-discord.png"></div><figcaption>Discord: так выглядит ваш профиль</figcaption></figure>
+  </div>
+</section>
+
+<section id="packs">
+  <h2>Коллекции <span class="grad">на любой вкус</span></h2>
+  <p class="sub">Сама Lumora лёгкая. Дополнительные коллекции — отдельными установщиками: аниме-арты и около 220 видео-обоев в 1080p.</p>
+  <div class="wall">
+    <div style="background-image:url(assets/art23.jpg)"></div><div style="background-image:url(assets/art27.jpg)"></div><div style="background-image:url(assets/art22.jpg)"></div><div style="background-image:url(assets/art44.jpg)"></div>
+    <div style="background-image:url(assets/art39.jpg)"></div><div style="background-image:url(assets/art46.jpg)"></div><div style="background-image:url(assets/art25.jpg)"></div><div style="background-image:url(assets/art20.jpg)"></div>
+  </div>
+  <div class="note"><b>Важно.</b> Арты и видео в коллекциях сделаны не автором Lumora и принадлежат своим создателям. Они показаны только как пример того, что можно найти в интернете и поставить на рабочий стол. Права на них у авторов; используйте для себя и не перепродавайте.</div>
+</section>
+
+<section id="install" class="cta">
+  <h2>Установка за <span class="grad">минуту</span></h2>
+  <p class="sub">Без прав администратора, без лишних вопросов.</p>
+  <div class="steps">
+    <div>Скачайте <b>Lumora-Setup.exe</b> из раздела Releases на GitHub.</div>
+    <div>Запустите, выберите папку и нажмите «Установить».</div>
+    <div>Откройте Lumora с рабочего стола — по умолчанию стоит анимация «Lumora — частицы».</div>
+    <div>По желанию добавьте коллекции: аниме-арты и видео, установщики лежат отдельно.</div>
+  </div>
+  <div class="row"><a class="btn" href="#">Скачать с GitHub</a></div>
+</section>
+
+<footer>
+  <div class="logo" style="justify-content:center;font-size:30px;margin-bottom:10px;color:#fff"><i><svg viewBox="0 0 24 24"><path d="M11 2.6l2.3 6.4 6.4 2.3-6.4 2.3L11 20l-2.3-6.4L2.3 11.3 8.7 9z"/></svg></i>Lumora</div>
+  Создал Frein ❤<br>Windows 10 / 11 · WebView2 · открытый код (MIT)<br><small>Арты и видео в коллекциях принадлежат их авторам и не входят в лицензию программы.</small>
+</footer>
+</body>
+</html>

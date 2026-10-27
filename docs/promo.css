@@ -1,0 +1,15 @@
+:root { --bg: #0b0b0f; --acc: #8136f2; --acc2: #c264ff; --fg: #f5f5fa; --mute: #9a9ab0; }
+* { box-sizing: border-box; margin: 0; }
+body { background: var(--bg); color: var(--fg); font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.star { width: 1em; height: 1em; display: inline-block; vertical-align: -.12em; }
+.grad { background: linear-gradient(100deg, #b98bff, #ff7ac8 60%, #ffb27a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.glow { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .55; pointer-events: none; }
+.btn { display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 26px; border-radius: 16px; background: var(--acc); color: #fff; font-weight: 650; font-size: 18px; text-decoration: none; box-shadow: 0 12px 34px rgba(129,54,242,.45); }
+.btn.ghost { background: rgba(255,255,255,.08); box-shadow: none; border: 1px solid rgba(255,255,255,.14); }
+.tag { display: inline-flex; height: 30px; align-items: center; padding: 0 14px; border-radius: 15px; background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.12); font-size: 14px; color: #ddd; }
+.cardimg { border-radius: 18px; background-size: cover; background-position: center; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 24px 60px rgba(0,0,0,.55); }
+.logo { display: flex; align-items: center; gap: 14px; font-weight: 750; letter-spacing: -.03em; }
+.logo i { width: 1.3em; height: 1.3em; border-radius: .38em; display: grid; place-items: center; background: linear-gradient(140deg, #8136f2, #c85af0); font-style: normal; font-size: .62em; box-shadow: 0 10px 30px rgba(129,54,242,.5); }
+.logo svg { width: 1.25em; height: 1.25em; fill: #fff; }
+.win { border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 80px rgba(0,0,0,.6); background: #0f0f13; }
+.win img { display: block; width: 100%; }
